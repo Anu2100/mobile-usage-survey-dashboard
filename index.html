@@ -50,7 +50,6 @@ h2 {
   padding-left: 10px;
   margin-top: 30px;
 }</style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <head>
   <title>Mobile Usage Survey Dashboard</title>
 </head>
@@ -61,17 +60,8 @@ h2 {
 
   <hr>
 
-  <h2>Survey Overview</h2><div class="card">
-  <h3>📊 Survey Overview</h3>
-  <p>Understand mobile usage patterns among college students.</p>
-  </div>
-
   <p><b>Total Students Surveyed:</b> 90</p>
-
-  <h2>Daily Mobile Usage</h2><div class="card">
-<div class="card">
-  <canvas id="usageChart"></canvas>
-</div>
+  
   <ul>
     <li>Less than 2 hours: 8 students</li>
     <li>2–4 hours: 22 students</li>
@@ -80,61 +70,6 @@ h2 {
     <li>More than 8 hours: 10 students</li></ul>
   </div>
   </ul>
-
-  <h2>Main Mobile Activities</h2>
-<div class="card">
-  <ul>
-    <li>Academic: 30%</li>
-    <li>Social Media: 25%</li>
-    <li>Entertainment: 20%</li>
-    <li>Communication: 15%</li>
-    <li>Gaming: 10%</li></ul>
-</div>
-  </ul>
-
-  <h2>Mobile Usage Analyzer</h2>
-<div class="card">
-  <h3>⏰ Mobile Usage Planner</h3>
-  <p>Plan your daily mobile activities and set a time limit.</p>
-
-  <label>Choose Activity:</label>
-  <select id="activity">
-    <option>Study</option>
-    <option>Gaming</option>
-    <option>Social Media</option>
-    <option>Entertainment</option>
-  </select>
-
-  <br><br>
-
-  <label>Start Time:</label>
-  <input type="time" id="startTime">
-
-  <br><br>
-
-  <label>End Time:</label>
-  <input type="time" id="endTime">
-
-  <br><br>
-
-  <button class="analyze-btn" onclick="addSchedule()">Add Schedule</button>
-
-  <div id="scheduleList"></div>
-</div>
-  <label>Select your daily usage:</label>
-  <select id="usage">
-    <option>Less than 2 hours</option>
-    <option>2–4 hours</option>
-    <option>4–6 hours</option>
-    <option>6–8 hours</option>
-    <option>More than 8 hours</option>
-  </select>
-
-  <br><br>
-
-  <button class="analyze-btn" onclick="analyze()">Analyze</button>
-
-  <p id="result"></p>
 
   <script>
     function analyze() {
