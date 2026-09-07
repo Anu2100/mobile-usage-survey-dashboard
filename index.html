@@ -146,21 +146,19 @@ h2 {
  <script>
 function addSchedule() {
   let activity = document.getElementById("activity").value;
-  let start = document.getElementById("startTime").value;
-  let end = document.getElementById("endTime").value;
+  let startTime = document.getElementById("startTime").value;
+  let endTime = document.getElementById("endTime").value;
 
-  if (start === "" || end === "") {
-    alert("Please select start and end time.");
+  if (startTime === "" || endTime === "") {
+    document.getElementById("scheduleResult").innerHTML =
+      "⚠️ Please select both start and end time.";
     return;
   }
 
-  let schedule = document.createElement("p");
-
-  schedule.innerHTML =
-    "<b>" + activity + "</b> — " + start + " to " + end;
-
-  document.getElementById("scheduleList").appendChild(schedule);
+  document.getElementById("scheduleResult").innerHTML =
+    "✅ " + activity + " scheduled from <b>" +
+    startTime + "</b> to <b>" + endTime + "</b>";
 }
- </script> 
+ </script>
 </body>
 </html>
