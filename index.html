@@ -59,7 +59,36 @@ h2 {
   <p>Smart Mobile Usage Planner & Analyser</p>
 
   <hr>
+<h2>Mobile Usage Planner</h2>
 
+<div class="card">
+  <h3>📅 Plan Your Activity</h3>
+
+  <label>Choose Activity:</label>
+  <select id="activity">
+    <option>Study</option>
+    <option>Gaming</option>
+    <option>Social Media</option>
+    <option>Entertainment</option>
+    <option>Communication</option>
+  </select>
+
+  <br><br>
+
+  <label>Start Time:</label>
+  <input type="time" id="startTime">
+
+  <br><br>
+
+  <label>End Time:</label>
+  <input type="time" id="endTime">
+
+  <br><br>
+
+  <button class="analyze-btn" onclick="addSchedule()">Add Schedule</button>
+
+  <p id="scheduleResult"></p>
+</div>
   <p><b>Total Students Surveyed:</b> 90</p>
   
   <ul>
