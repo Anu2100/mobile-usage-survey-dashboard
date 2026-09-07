@@ -101,10 +101,20 @@ h2 {
   </ul>
 
   <script>
-    function analyze() {
-      let usage = document.getElementById("usage").value;
-      document.getElementById("result").innerHTML =
-        "Your selected daily mobile usage is: <b>" + usage + "</b>";
+    function addSchedule() {
+  let activity = document.getElementById("activity").value;
+  let startTime = document.getElementById("startTime").value;
+  let endTime = document.getElementById("endTime").value;
+
+  if (startTime === "" || endTime === "") {
+    document.getElementById("scheduleResult").innerHTML =
+      "Please select both start and end time.";
+    return;
+  }
+
+  document.getElementById("scheduleResult").innerHTML =
+    "✅ " + activity + " scheduled from <b>" +
+    startTime + "</b> to <b>" + endTime + "</b>";
     }
   </script>
 <script>
