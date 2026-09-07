@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Usage Survey Dashboard</title>
+</head>
+<body>
+
+  <h1>Mobile Usage Survey Dashboard</h1>
+  <p>Survey of College Students</p>
+
+  <hr>
+
+  <h2>Survey Overview</h2>
+
+  <p><b>Total Students Surveyed:</b> 90</p>
+
+  <h2>Daily Mobile Usage</h2>
+
+  <ul>
+    <li>Less than 2 hours: 8 students</li>
+    <li>2–4 hours: 22 students</li>
+    <li>4–6 hours: 31 students</li>
+    <li>6–8 hours: 19 students</li>
+    <li>More than 8 hours: 10 students</li>
+  </ul>
+
+  <h2>Main Mobile Activities</h2>
+
+  <ul>
+    <li>Academic: 30%</li>
+    <li>Social Media: 25%</li>
+    <li>Entertainment: 20%</li>
+    <li>Communication: 15%</li>
+    <li>Gaming: 10%</li>
+  </ul>
+
+  <h2>Mobile Usage Analyzer</h2>
+
+  <label>Select your daily usage:</label>
+  <select id="usage">
+    <option>Less than 2 hours</option>
+    <option>2–4 hours</option>
+    <option>4–6 hours</option>
+    <option>6–8 hours</option>
+    <option>More than 8 hours</option>
+  </select>
+
+  <br><br>
+
+  <button onclick="analyze()">Analyze</button>
+
+  <p id="result"></p>
+
+  <script>
+    function analyze() {
+      let usage = document.getElementById("usage").value;
+      document.getElementById("result").innerHTML =
+        "Your selected daily mobile usage is: <b>" + usage + "</b>";
+    }
+  </script>
+
+</body>
+</html>
