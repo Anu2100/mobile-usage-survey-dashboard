@@ -179,5 +179,24 @@ h2 {
     }
   });
 </script>
+ <script>
+function addSchedule() {
+  let activity = document.getElementById("activity").value;
+  let start = document.getElementById("startTime").value;
+  let end = document.getElementById("endTime").value;
+
+  if (start === "" || end === "") {
+    alert("Please select start and end time.");
+    return;
+  }
+
+  let schedule = document.createElement("p");
+
+  schedule.innerHTML =
+    "<b>" + activity + "</b> — " + start + " to " + end;
+
+  document.getElementById("scheduleList").appendChild(schedule);
+}
+ </script> 
 </body>
 </html>
