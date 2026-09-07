@@ -116,6 +116,41 @@ h2 {
         "Your selected daily mobile usage is: <b>" + usage + "</b>";
     }
   </script>
+<script>
+  const ctx = document.getElementById('usageChart');
 
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['<2 hrs', '2–4 hrs', '4–6 hrs', '6–8 hrs', '>8 hrs'],
+      datasets: [{
+        label: 'Students',
+        data: [8, 22, 31, 19, 10]
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#d7e5e2'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#d7e5e2'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#d7e5e2'
+          }
+        }
+      }
+    }
+  });
+</script>
 </body>
 </html>
