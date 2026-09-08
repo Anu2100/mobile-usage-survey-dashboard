@@ -91,61 +91,8 @@ h2 {
   <div id="scheduleList"></div>
 </div>
 
-  <script>
-    function addSchedule() {
-  let activity = document.getElementById("activity").value;
-  let startTime = document.getElementById("startTime").value;
-  let endTime = document.getElementById("endTime").value;
-
-  if (startTime === "" || endTime === "") {
-    document.getElementById("scheduleResult").innerHTML =
-      "Please select both start and end time.";
-    return;
-  }
-
-  document.getElementById("scheduleResult").innerHTML =
-    "✅ " + activity + " scheduled from <b>" +
-    startTime + "</b> to <b>" + endTime + "</b>";
-    }
-  </script>
-<script>
-  const ctx = document.getElementById('usageChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['<2 hrs', '2–4 hrs', '4–6 hrs', '6–8 hrs', '>8 hrs'],
-      datasets: [{
-        label: 'Students',
-        data: [8, 22, 31, 19, 10]
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          labels: {
-            color: '#d7e5e2'
-          }
-        }
-      },
-      scales: {
-        x: {
-          ticks: {
-            color: '#d7e5e2'
-          }
-        },
-        y: {
-          ticks: {
-            color: '#d7e5e2'
-          }
-        }
-      }
-    }
-  });
-</script>
  <script>
-function addSchedule() {
+   function addSchedule() {
   let activity = document.getElementById("activity").value;
   let startTime = document.getElementById("startTime").value;
   let endTime = document.getElementById("endTime").value;
@@ -155,6 +102,17 @@ function addSchedule() {
       "⚠️ Please select both start and end time.";
     return;
   }
+
+  document.getElementById("scheduleResult").innerHTML =
+    "✅ " + activity + " scheduled from <b>" +
+    startTime + "</b> to <b>" + endTime + "</b>";
+
+  document.getElementById("scheduleList").innerHTML +=
+    "<div class='card'>" +
+    "<h3>📅 " + activity + "</h3>" +
+    "<p>⏰ " + startTime + " → " + endTime + "</p>" +
+    "</div>";
+   }
 
   document.getElementById("scheduleResult").innerHTML =
     "✅ " + activity + " scheduled from <b>" +
